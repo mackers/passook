@@ -1,0 +1,24 @@
+Passook is a perl script that automatically generates passwords. Passook is
+customizable so that you can choose different levels between a very
+pronounceable or a very secure password. Passook can be run in a unix shell or
+as a cgi script.
+
+First of all passook only works on a unix system, so /usr/dict/words
+should be there. If it's in a different place you can find it with:
+find / -name words -print
+It also needs the egrep executable.
+
+Usage:
+
+passook [-n num] [-p plev] [-u usernames [-d delim]]
+
+-n [num] where num is the number of passwords to generate
+-p [plev] where pleve is the pronouncability level (1-5)
+-u [usernames] where usernames is the file of users. passook will 
+   prepend each password with each username in the file. It makes 
+   sense to have [num] above as the number of usernames in the file.
+   Use a unix (\n endings) file.
+-d [delim] where delim is the deliminator between users/password
+
+http://github.com/mackers/passook
+
